@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { Container } from 'react-bootstrap';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Subtotal from './components/Subtotal/Subtotal';
+
+class App extends Component{
+  constructor(props){
+    super(props);
+
+    this.state = {
+      total: 100,
+    }
+  }
+  render(){
+    return (
+      <div className='container'>
+        <Container className='purchase-card'>
+          <Subtotal prices={this.state.total.toFixed(2)} />
+        </Container>
+      </div>
+    );
+  }
+  }
 
 export default App;
