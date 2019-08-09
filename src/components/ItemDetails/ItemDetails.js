@@ -18,7 +18,7 @@ class ItemDetails extends Component{
       <Aux>
         <Button
           className='item-details-button'
-          bsStyle='link'
+          bsstyle='link'
           onClick={()=> this.setState({ open: !this.state.open })}
         >
           { this.state.open === false ? 'See' : 'Hide' } Item Details
