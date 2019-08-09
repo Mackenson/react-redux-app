@@ -7,7 +7,7 @@ const initialState = {
 
 const promoCodeReducer = function (state = initialState, action) {
   switch (action.types) {
-    case PROMO_CODE:
+    case PROMO_CODE.PROMO_CODE:
     return{
       ...state,
       value: action.payload
